@@ -87,7 +87,7 @@
 			$this->browser = (object) array('stock' => true, 'hidden' => false, 'channel' => '', 'mode' => '');
 			$this->engine = (object) array();
 			$this->os = (object) array();
-			$this->device = (object) array('type' => '', 'identified' => ID_NONE, 'generic' => true);
+			$this->device = (object) array('type' => '', 'identified' => ID_NONE, 'generic' => true, 'width' => 0, 'height' => 0);
 
 			$this->camouflage = false;
 			$this->features = array();
@@ -321,6 +321,8 @@
 					}
 					*/
 				}
+				$this->device->width = $this->options->width;
+				$this->device->height = $this->options->height;
 			}
 
 			if (isset($this->options->features)) {

@@ -175,6 +175,8 @@ var WhichBrowser = (function(){
 			this.manufacturer = v.manufacturer || null;
 			this.model = v.model || null;
 			this.series = v.series || null;
+			this.width = v.width || null;
+			this.height = v.height || null;
 		},
 		
 		toJSON: function() {
@@ -183,7 +185,9 @@ var WhichBrowser = (function(){
 				identified:		this.identified,
 				manufacturer:	this.manufacturer,
 				model:			this.model,
-				series:			this.series
+				series:			this.series,
+				width:			this.width,
+				height:			this.height
 			};
 		},
 		
